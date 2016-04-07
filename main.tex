@@ -73,27 +73,25 @@ This section will describe the setup of our crowdsourcing experiments.
 
 This section will contain the results of our experiments.
 
-\begin{table*}[h]
+\begin{table}[h]
 \centering
 \caption{Statistics of different types of answers for Yahoo! Answers questions}
-\begin{tabular}{| p{2.5cm} | c | c | c | c | c |}
+\begin{tabular}{| p{2.3cm} | c | c | c |}
 \hline
-Statistic & Yahoo! Answers & CMU system & Emory system & mTurk & mTurk (time)\\
+Statistic & Y!A & mTurk & mTurk-time\\
 \hline
-\% answered & 78.7\% & 97.4 \% & 81.3 \% & 100.0\%\footnote{We only collected crowdsourced answers for questions, that were answered on Yahoo! Answers. The rest of the questions are not available on the website anymore. We considered a question answered if at least one of the workers provided an answer} & 100.0\% \\
-Length (chars) & 354.96 & 782.46 & 550.1841 & 190.83 & 126.65 \\
-Length (words) & 64.54 & 126.45 & 97.73 & 34.16 & 22.82 \\
-\hline
-
+\% answered & 78.7\% & 100.0\% & 100.0\% \\
+Length (chars) & 354.96 & 190.83 & 126.65 \\
+Length (words) & 64.54 & 34.16 & 22.82 \\
 \hline
 \end{tabular}
 \label{table:answer_stats}
-\end{table*}
+\end{table}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{img/average_score}
-\caption{Average scores of different type of answers to Yahoo! Answers questions}
+\caption{Average scores of different type of answers to Yahoo! Answers questions for different categories}
 \label{fig:average_score}
 \end{figure}
 
