@@ -7,6 +7,7 @@
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage{graphicx}
+\usepackage{subcaption}
 
 % \naaclfinalcopy % Uncomment this line for the final submission
 \def\naaclpaperid{***} %  Enter the naacl Paper ID here
@@ -63,6 +64,13 @@ What are implications and value.
 Describe the problem.
 State contributions.
 
+We focus on the following research questions:
+\begin{enumerate}
+\item RQ1. Can crowdsourcing be used to judge the quality of answers to non-factoid questions under time limit?
+\item RQ2. Is it possible to use crowdsourcing to collect answers to real user questions under time limit?
+\item RQ3. How the quality of crowdsourced answers to non-factoid question compare to original CQA answers and automatic answers from TREC LiveQA systems?
+\end{enumerate}
+
 
 \section{Methodology}
 \label{sec:methodology}
@@ -80,7 +88,36 @@ This section will describe the setup of our crowdsourcing experiments.
 \section{Results}
 \label{sec:results}
 
-This section will contain the results of our experiments.
+First, we will describe results on crowdsourcing answer ratings, because we are planning to use these scores to estimate the quality of generated answers.
+
+\subsection{Answer validation}
+
+To get ratings for answers and compare their quality against trained NIST assessors, we sampled 200 questions from TREC LiveQA 2015, and took answers from 3 different systems.
+The interest of this work is in real-time scenario, therefore we made two experiments: with and without time pressure.
+In the first experiment workers were given a minute to provide their judgments, and in the second experiment the working time wasn't limited.
+Figure \ref{figure:score_correlation} shows correlation between official NIST assessor relevance judgments and ratings provided by our workers.
+Results showed, that Pearson correlation between official scores and our ratings is $\rho=0.52$.
+The distribution of scores shows, that official assessors were very generous in giving the lowest score of 1, mechanical turk scores tend to be a little higher and they assign extreme score less often.
+
+However, in general, the results suggest that we can trust crowdsourced ratings and we will use them in our next experiment to estimate the quality of different answers.
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/score_correlation}
+	\caption{Correlation between NIST assessor scores and crowdsourced ratings with and without time limit on the work time}
+	\label{figure:score_correlation}
+\end{figure}
+	
+Figure \ref{figure:validation_time} shows that even though the median time to rate all three answers is around 22-25 seconds in both experiments, the upper bound is significantly lower in the experiment with the time pressure.
+	
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/validation_time}
+	\caption{Box plot of rating time with and without time pressure}
+	\label{figure:validation_time}
+\end{figure}
+
+\subsection{Answer crowdsourcing}
 
 \begin{table}[h]
 \centering
