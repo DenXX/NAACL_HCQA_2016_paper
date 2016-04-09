@@ -119,6 +119,15 @@ Figure \ref{figure:validation_time} shows that even though the median time to ra
 
 \subsection{Answer crowdsourcing}
 
+In the next experiment we asked Mechanical Turk workers to answer question from TREC LiveQA.
+Again, we conducted two experiments with and without time restrictions.
+In the first experiment users were given a minute to answer the given question and a countdown timer was displayed on the screen.
+We collected 3 answers for each TREC LiveQA question.
+Table \ref{table:answer_stats} summarizes some statistics on the answers.
+First thing to notice is that, unlike CQA websites, where some questions are left unanswered, by paying the crowd workers we were able to get at least one answer for all LiveQA questions (after filtering ``NA'' and ``I don't know'' answers).
+The length of the answers, provided by Mechanical turk users is lower, and time pressure forces user to be even more concise.
+
+
 \begin{table}[h]
 \centering
 \caption{Statistics of different types of answers for Yahoo! Answers questions}
@@ -134,12 +143,24 @@ Length (words) & 64.54 & 34.16 & 22.82 \\
 \label{table:answer_stats}
 \end{table}
 
+To answer RQ2 we took a sample of 100 LiveQA questions along with their original CQA, crowdsourced and some LiveQA participants answers and asked users to rate each of them on a scale from 1 to 4, similar to the official scoring.
+Each set of answers was judged by 3 different workers, and their scores were averaged.
+Figure \ref{fig:average_score} displays the plot with average score for answers from different sources.
+Quite surprisingly the quality of collected answers turned out be comparable to answers provided by the CQA website users.
+Average rating of answers produced by the winning TREC LiveQA system is also pretty close to those of human answers.
+Finally, as expected, time pressure had its negative effect on the quality.
+
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.5\textwidth]{img/average_score}
-\caption{Average scores of different type of answers to Yahoo! Answers questions for different categories}
-\label{fig:average_score}
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/average_score}
+	\caption{Average scores of different type of answers to Yahoo! Answers questions for different categories}
+	\label{fig:average_score}
 \end{figure}
+
+Analysis of scores distribution (Figure \ref{fig:scores_distribution}) shed some light on the nature of the problems with automatic and human answers.
+As we can see, automatic systems generate non-relevant answers ($score=1$) more often than human.
+This means, that quite often the model either fails to retrieve relevant information or to separate between useful and non-useful answer candidates.
+However, by having larger information store, e.g. world wide web, question answering systems can often find the perfect answer ($score=4$), while regular people tend to give generally useful responses ($score=2,3$).
 
 \begin{figure}[h]
 \centering
@@ -147,6 +168,16 @@ Length (words) & 64.54 & 34.16 & 22.82 \\
 \caption{Distribution of scores for different types of answers to Yahoo! Answers questions}
 \label{fig:scores_distribution}
 \end{figure}
+
+From Figure \ref{fig:answering_time_distribution} we can see that adding time pressure shifts the distribution of answering times\footnote{For the experiment with time pressure we had separate timers for reading instructions, reading the question and writing the answer, that's why the total time on the plot could be more than 1 minute}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/answering_time_distribution}
+	\caption{Distribution of answering times for experiments with and without time pressure}
+	\label{fig:answering_time_distribution}
+\end{figure}
+
 
 \section{Discussion}
 \label{sec:discussion}
