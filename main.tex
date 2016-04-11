@@ -8,7 +8,7 @@
 \usepackage{latexsym}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{multirow,tabularx}
+\usepackage{tabularx}
 
 % \naaclfinalcopy % Uncomment this line for the final submission
 \def\naaclpaperid{***} %  Enter the naacl Paper ID here
@@ -170,8 +170,10 @@ In the answer rating experiment we collected 6 ratings (3 with and without time 
 Each of the answers also has an official NIST assessor rating on the same scale.
 Figure \ref{figure:score_correlation} shows correlation between official NIST assessor relevance judgments and ratings provided by our workers.
 The Pearson correlation between the scores is $\rho=0.52$.
-The distribution of scores shows, that official assessors were very generous in giving the extreme scores of 1 or 4, whereas mechanical turk workers prefer intermediate scores of 2 and 3.
-The results didn't show any significant differences between time pressured and no time pressured experiments, which suggests that one minute is enough to judge three answers to a CQA questions.
+The distribution of scores shows, that official assessors were very strict and assigned many extreme scores of 1 or 4, whereas mechanical turk workers preferred intermediate scores of 2 and 3.
+The results did not show any significant differences between experiments with and without time pressure.
+Therefore, for RQ1 we conclude that on average one minute is enough to judge three answers to CQA questions.
+
 
 \begin{figure}[t!]
 	\centering
@@ -195,7 +197,17 @@ We can conclude, that in general we can trust crowdsourced ratings and we will u
 \subsection{Answer crowdsourcing}
 \label{subsec:results:answer_crowd}
 
-In our experiment in answer crowdsourcing we collected 6 answers (with and without time pressure) for each of the 1087 LiveQA'15 questions\footnote{We will release the data for the community???}.
+In our experiment in answer crowdsourcing we collected 6 answers (with and without time pressure) for each of the 1087 LiveQA'15 questions.
+Since we have answers from different sources, let's make the following notations:
+\begin{itemize}
+	\item \textit{Yahoo! Answers} - answers eventually posted by users on Yahoo! Answers for the original questions
+	\item \textit{Crowd} - answers collected from Mechanical Turk workers without time pressure
+	\item \textit{Crowd-time} - answers collected from Mechanical Turk workers with one minute time pressure
+	\item \textit{LiveQA winner} - answers from the TREC LiveQA'15 winning system
+	\item \textit{LiveQA top10} - answers from another top 10 TREC LiveQA'15 system.
+\end{itemize}
+
+%\footnote{We will release the data for the community???}.
 Table \ref{table:answer_stats} summarizes some statistics on the answers.
 First thing to notice is that, unlike CQA websites, where some questions are left unanswered, by paying the crowd workers we were able to get at least one answer for all LiveQA questions (after filtering ``NA'' and ``I don't know'' answers).
 The length of the answers, provided by Mechanical turk users is lower, and time pressure forces user to be even more concise.
@@ -216,7 +228,7 @@ Length (words) & 64.54 & 34.16 & 22.82 & 137.23 \\
 \label{table:answer_stats}
 \end{table*}
 
-From Figure \ref{fig:answering_time_distribution} we can see that adding time pressure shifts the distribution of answering times\footnote{For the experiment with time pressure we had separate timers for reading instructions, reading the question and writing the answer, that's why the total time on the plot could be more than 1 minute}.
+From the Figure \ref{fig:answering_time_distribution} we can see that adding time pressure shifts the distribution of answering times\footnote{For the experiment with time pressure we had separate timers for reading instructions, reading the question and writing the answer, that's why the total time on the plot could be more than 1 minute}.
 
 \begin{figure}[h]
 	\centering
@@ -247,7 +259,7 @@ Table \ref{table:answer_examples} gives some example answers from different sour
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth]{img/scores_distribution}
+\includegraphics[width=0.5\textwidth]{img/scores_distribution}
 \caption{Distribution of scores for different types of answers to Yahoo! Answers questions}
 \label{fig:scores_distribution}
 \end{figure}
@@ -264,17 +276,17 @@ Table \ref{table:answer_examples} gives some example answers from different sour
 \multicolumn{2}{|c|}{How long do Rottweilers usually live?} \\
 \hline
 Yahoo! Answer & I'm afraid anything from about 7 to 12.... some we lose outside of those ages such as 5 or 15 but they are extreme.\\
-Crowdsourcing & The average life expectancy of a rottweiler is about 9 years. Smaller breeds have higher life expectancies\\
-Crowdsourcing (time pressure) & Any where between 8-12 years\\
-Automatic system & Here's an answer to your question and some other information you may find useful. Average Life Span: 10-13 years Average Weight: Male 110 pounds, Females 90 pounds Color And Coat: Coarse flat coat, black in color with rust markings on cheeks, muzzle, chest, legs, above eyes and under the tail. Typical Health Problems: ...\\
+Crowd & The average life expectancy of a rottweiler is about 9 years. Smaller breeds have higher life expectancies\\
+Crowd-time & Any where between 8-12 years\\
+LiveQA winner & Here's an answer to your question and some other information you may find useful. Average Life Span: 10-13 years Average Weight: Male 110 pounds, Females 90 pounds Color And Coat: Coarse flat coat, black in color with rust markings on cheeks, muzzle, chest, legs, above eyes and under the tail. Typical Health Problems: ...\\
 \hline
 \hline
 \multicolumn{2}{|c|}{Can Hammerli ar20 air rifle be used in a competition?}\\
 \hline
 Yahoo! Answers & You're not going to see them in international(Olympic, WC) 10M competition, but the Hammerli AR20 is a good starter rifle for young folks looking to get into the sport. Adult / starter 10M rifle If you're looking to get into the sport on the cheap. I suggest a S/H Feinwerkbau 300*** The FWB 300 is just as accurate as a new 700 or 800. The 300 just has fewer bells and whistles. At 1/5th the cost(or less) though, you can't beat the price for performance. ***have someone that knows what to look for examine the rifle for you.\\
-Mechanical Turk & Yes they can be. Not everything can be in all competitions but this gun can certainly be in some.\\
-Mechanical Turk (time pressure) & Yes\\
-LiveQA'15 system & Ambidextrous cocking piece with release lever. Wide loading recess with precision feed. Lothar Walther match barrel. Silver aluminum stock with variable stock length, cheekpiece height and fore end height. Ambidextrous grip and stock. Shorten or lengthen the stock with included spacers (41.65" to 43.66"). Front sight globe accepts 3.8mm inserts (1 insert included). Fully adjustable diopter rear sight. 29.53" (750mm) sight length, 200 and 300 bar fill pressures (2,900 psi and 4,351 psi, respectively). Removable aluminum air cylinder with integral manometer (air pressure gauge). 2-stage trigger can be adjusted for pressure point, pull weight, stop and slack. T-rail for 3-position competition\\
+Crowd & Yes they can be. Not everything can be in all competitions but this gun can certainly be in some.\\
+Crowd-time & Yes\\
+LiveQA winner & Ambidextrous cocking piece with release lever. Wide loading recess with precision feed. Lothar Walther match barrel. Silver aluminum stock with variable stock length, cheekpiece height and fore end height. Ambidextrous grip and stock. Shorten or lengthen the stock with included spacers (41.65" to 43.66"). Front sight globe accepts 3.8mm inserts (1 insert included). Fully adjustable diopter rear sight. 29.53" (750mm) sight length, 200 and 300 bar fill pressures (2,900 psi and 4,351 psi, respectively). Removable aluminum air cylinder with integral manometer (air pressure gauge). 2-stage trigger can be adjusted for pressure point, pull weight, stop and slack. T-rail for 3-position competition\\
 \hline
 \end{tabular}
 \label{table:answer_examples}
