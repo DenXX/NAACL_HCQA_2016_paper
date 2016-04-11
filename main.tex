@@ -20,7 +20,7 @@
 \newcommand\BibTeX{B{\sc ib}\TeX}
 
 
-\title{Crowdsourcing for near Real-time Question Answering}
+\title{Crowdsourcing for (almost) Real-time Question Answering}
 
 % Author information can be set in various styles:
 % For several authors from the same institution:
@@ -54,12 +54,11 @@
 
 \begin{abstract}
 
-Modern search engines made a lot of progress in answering many of users factoid questions.
-Majority of non-factoid questions, however, are still beyond the competence of the computer systems as demonstrated by the recent TREC LiveQA 2015 shared task.
-As conversational agents become more popular, QA systems needs to learn to handle such questions, which compose a significant fraction of users information needs.
-One way to overcome some of the challenges in non-factoid question answering is to include human in the loop.
-In this work we study two ways crowdsourcing can be used to assist a question answering system: by providing answer ratings, which could be used as one of the ranking signals, and by answering the questions under certain time restrictions.
-Our experiments demonstrate, that within one minute time limit crowd workers can produce trustworthy ratings for three answer candidates, or generate a relevant answer.
+Modern search engines have made dramatic progress in answering many of user's questions about facts, such as those that might be retrieved or directly inferred from a knowledge base. However, many other questions, such as those asking for opinions or advice for a particular situation, are still largely beyond the competence of the computer systemsk.
+As conversational agents become more popular, QA systems are increasingly expected to handle such questions, which compose a significant fraction of users information needs, and to do so in (nearly) real-time, as the searcher is unlikely to wait longer than a minute or two for an answer.
+One way to overcome some of the challenges in complex question answering is to include a human in the loop.
+We explore two ways crowdsourcing can be used to assist a question answering system that operates in (near) real time: by providing answer ratings, which could be used to filter or re-rank the candidate answers, and by creating the answer candidates. While crowd-sourced answers and ratings have been studied before, we  with externally imposed time restrictions. 
+Our experiments show that within one minute time limit crowd workers can produce trustworthy ratings for three answer candidates, or generate a relevant answer.
 Our findings can be useful for future research on combining human input with automatic question answering and conversation agents.
 
 \end{abstract}
