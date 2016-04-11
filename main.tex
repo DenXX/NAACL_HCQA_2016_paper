@@ -311,82 +311,21 @@ A user, who receives an answer from an expert system will probably trust it more
 \section{Related Work}
 \label{sec:related_work}
 
-In \cite{bernstein2012direct} authors used a combination of log mining and crowdsourcing to build answers to a long tail of questions, that search engine users ask, therefore increasing the coverage of direct answers
+Using the wisdom of a crowd to help users satisfy their information needs has been studied before in the literature.
+\cite{bernstein2012direct} explored the use of crowdsourcing for offline preparation of answers to tail search queries.
+In this work log mining techniques were used to identify potential question-answer fragment pairs, which were then processed by the crowd to generate the final answer.
+This offline procedure allows a search engine to increase the coverage of direct answers in response to user questions.
+In our work, however, the focus is on online question answering, which requires fast responses to the user, who is unlikely to wait more than a minute.
+Another related work is targeting a different domain of SQL queries.
+The CrowdDB system \cite{franklin2011crowddb} is an SQL-like processing system for queries, that cannot be answered by machines only.
+In CrowdDB human input is used to collect missing data, perform computationally difficult functions or matching against the query.
 
-CrowdDB of \cite{franklin2011crowddb} uses human input via crowdsourcing
-to process queries that neither database systems nor search engines
-can adequately answer.
 
-\cite{Lasecki:2013:CCC:2501988.2502057} - When using Chorus, end users converse continuously with what appears to be a single conversational partner. Behind the scenes, Chorus leverages multiple crowd workers to propose and vote on responses. A shared memory space helps the dynamic crowd workforce maintain consistency, and a game-theoretic incentive mechanism helps to balance their efforts between proposing and voting.
-
-\cite{demartini2013crowdq} - Work in hybrid human-machine query processing has thus far focused on the data: gathering, cleaning, and sorting. In
-this paper, we address a missed opportunity to use crowdsourcing
-to understand the query itself. We propose a novel
-hybrid human-machine approach that leverages the crowd
-to gain knowledge of query structure and entity relationships.
-The proposed system exploits a combination of query
-log mining, natural language processing (NLP), and crowdsourcing
-to generate query templates that can be used to
-answer whole classes of different questions rather than focusing
-on just a specific question and answer.
-
-\cite{bernstein2015soylent} - This paper introduces architectural and interaction patterns for integrating crowdsourced human contributions directly into user interfaces. We focus on writing and editing, complex endeavors that span many levels of conceptual and pragmatic activity. Authoring tools offer help with pragmatics, but for higher-level help, writers commonly turn to other people. We thus present Soylent, a word processing interface that enables writers to call on Mechanical Turk workers to shorten, proofread, and otherwise edit parts of their documents on demand. To improve worker quality, we introduce the Find-Fix-Verify crowd programming pattern, which splits tasks into a series of generation and review stages. Evaluation studies demonstrate the feasibility of crowdsourced editing and investigate questions of reliability, cost, wait time, and work time for edits.
-
-\cite{aydin2014crowdsourcing} - We leverage crowd wisdom for multiple-choice question
-answering, and employ lightweight machine learning
-techniques to improve the aggregation accuracy of
-crowdsourced answers to these questions. In order to
-develop more effective aggregation methods and evaluate
-them empirically, we developed and deployed a
-crowdsourced system for playing the “Who wants to be
-a millionaire?” quiz show. Analyzing our data (which
-consist of more than 200,000 answers), we find that by
-just going with the most selected answer in the aggregation,
-we can answer over 90% of the questions correctly,
-but the success rate of this technique plunges to 60%
-for the later/harder questions in the quiz show. To improve
-the success rates of these later/harder questions,
-we investigate novel weighted aggregation schemes for
-aggregating the answers obtained from the crowd. By
-using weights optimized for reliability of participants
-(derived from the participants’ confidence), we show that
-we can pull up the accuracy rate for the harder questions
-by 15%, and to overall 95% average accuracy. Our results
-provide a good case for the benefits of applying
-machine learning techniques for building more accurate
-crowdsourced question answering systems.
-
-\cite{liu2015real} - With the increasing
-use of mobile devices, searchers increasingly expect to find
-more local and time-sensitive information, such as the current
-special at a cafe around the corner. Yet, few services provide
-such hyper-local and time-aware question answering.
-
--------
-
-Crowdsourcing has been employed for answering subjective,
-relative, or multidimensional location-based queries
-for which the traditional search engines perform poorly.
-Two examples of location-based question answering systems
-are our previous work (Bulut, Yilmaz, and Demirbas 2011;
-Demirbas et al. 2010). AskMSR (Brill, Dumais, and Banko
-2002) leans on the redundant data on the web instead of the
-complex NLP techniques. SMSFind (Chen, Subramanian,
-and Brewer 2010) is an example of SMS-based question answering
-systems. It leverages the search engines to answer
-the questions automatically. It tries to find the best matching
-answer by using both IR and NLP techniques. Although
-SMSFind is not a truly crowdsourced answering system, it is
-remarkable in the sense that the authors point out what type
-of questions are ambiguous to their system and where the
-human intelligence is needed. In another work, CrowdDB
-(Franklin et al. 2011), authors present an SQL-like query processing
-system to collect large amount of data with the help
-of microtask-based crowdsourcing. CrowdDB is piggybacked
-to Amazon Mechanical Turk (amt ).
-
--------
-
+Crowdsourcing is usually associated with offline data collection, which requires certain amount of time for data collection.
+Using crowdsourcing in (near) real-time scenarios poses certain additional challenges.
+\cite{bernstein2011crowds} introduced the retainer model for recruiting synchronous crowds for interactive real-time tasks and showed their effectiveness on the best single image and creative generation tasks.
+We are planning to build on this ideas to integrate a crowd into a real-time question answering system.
+The work of \cite{Lasecki:2013:CCC:2501988.2502057} showed how multiple workers can sit behind a conversational agent named Chorus, where human input is used to propose and vote on responses. 
 
 
 \section{Conclusion}
