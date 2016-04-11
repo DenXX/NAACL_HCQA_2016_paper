@@ -74,12 +74,10 @@ Question answering is one of the major components of such personal assistants.
 Existing techniques already allow users to get direct answers to their factoid questions\footnote{https://www.stonetemple.com/rich-answers-in-search/}.
 However, there is still a large number of more complex questions, such as advice or accepted general opinions, for which users have to dig into the ``10 blue links'' and extract or synthesize answers from information buried within the retrieved documents. To answer these information needs, community question answering (CQA) sites emerged, such as Yahoo! Answers and Stackexchange. These sites provide a popular way to connect information seekers with answerers. Unfortunately, it it can take minutes or hours, and sometimes days, for the community to respond, and some questions are left unanswered altogether. 
 
-To address this challege, a recent TREC LiveQA shared task (www.trec-liveqa.org) was started in 2015, where automated systems attempt to answer real users' questions within 1 minute. This task was successful, with the winning system able to automatically return a reasonable answer to more than half of the submitted questions, as assessed for TREC by the trained judges from NIST. Nevertheless, many questions were not answered well by any of the participating systems.
+To faciliate research on this challege, a recent TREC LiveQA shared task (www.trec-liveqa.org) was started in 2015, where automated systems attempt to answer real users' questions within 1 minute. This task was successful, with the winning system able to automatically return a reasonable answer to more than half of the submitted questions, as assessed for TREC by the trained judges from NIST. Nevertheless, many questions were not answered well by any of the participating systems.
 
 In this work we explore two ways common crowdsourcing can be used to help an automated system to answer complex user questions in near real-time scenario, e.g., within a minute.
-More specifically, we study if crowd workers can quickly and reliably judge the quality of the proposed answer candidates, and if it is possible to obtain reasonable written answers from the crowd within a limited amount of time.
-
-The research questions we study in this work are:
+More specifically, we study if crowd workers can quickly and reliably judge the quality of the proposed answer candidates, and if it is possible to obtain reasonable written answers from the crowd within a limited amount of time. Our research questions can be stated as:
 \begin{enumerate}
 \item RQ1. Can crowdsourcing be used to judge the quality of answers to non-factoid questions under a time limit?
 \item RQ2. Is it possible to use crowdsourcing to collect answers to real user questions under a time limit?
@@ -338,12 +336,9 @@ In this paper, we focus on a single part of the human-computer dialog, i.e. ques
 \section{Conclusion}
 \label{sec:conclusion}
 
-In this work we conducted a series of crowdsourcing experiments, designed to explore the potential usefulness of crowdsourcing for near real-time question answering.
-The data we collected demonstrated, that crowd workers are capable of validating a small set of answer candidates within one minute time limit.
-This can be used by an automatic QA system for answer validation and reranking.
-In addition, one minute seems to be enough for a crowd to generate a fair or good response to the question (RQ2), which can be useful in case a QA system didn't have good candidates in the first place.
-Finally, we compared crowdsourced answers with original Yahoo! Answers response and responses of LiveQA'15 systems (RQ3).
-The quality of such answers on average turned out to be comparable to the original Yahoo! Answers responses, and even with time pressure crowdsourcing could potentially be useful for automatic systems.
+We explored the potential usefulness of crowdsourcing for near real-time question answering by either directly collecting answers from the crowd, or using the crowdsourced judgments to quickly validate automated answers. Our initial results showed that crowd workers are capable of validating a small set of answer candidates within a minute time limit, which could be potentially incorporated into an automatic QA system for answer validation and reranking (RQ1).
+In addition, one minute seems to be enough for a crowd to generate a fair or good response to most real  questions drawn from a CQA site, which can be useful in case a QA system didn't have good candidates in the first place (RQ20.
+Finally, we compared crowdsourced answers with original Yahoo! Answers responses, and the responses of purely automated LiveQA'15 systems (RQ3). The quality of such answers on average turned out to be comparable to the original Yahoo! Answers responses, and even with time pressure, crowdsourcing could potentially be useful to complement or augment the automatic systems.
 
 %\section*{Acknowledgments}
 %If any...
