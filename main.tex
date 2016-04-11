@@ -75,15 +75,49 @@ We focus on the following research questions:
 \section{Methodology}
 \label{sec:methodology}
 
-\subsection{Crowdsourcing Interface}
+This section will describe the methods used to collect our data for specific. All data collection was implemented through the use of Amazon mechanical turk. Amazon mechanical turk is an amazon service used for crowdsourceing answers from human workers. Workers who participated in validation were compensated 5 cents per question. Workers who participated in answer crowdsourcing were compensated 10 cents per question. All hiding and un-hiding of different fields as well as the timer implementation was carried out through the use of javascript embedded in the form.
+
+\subsection{Answer Crowdsourcing Interface}
 \label{subsec:interface}
 
+For answer crowdsourcing, users were shown the instructions on how to answer the validation form. Upon clicking a button to indicate that they were done reading the instructions, a question became unhidden along with a button to indicate that would be clicked once the user was done reading the question. The user would then be shown four fields to complete:
 
+\begin{enumerate}
+\item Does the answer make sense: A yes or no question to see if the answer was comprehensible 
+\item Are you familiar with the question: A yes or no question to evaluate whether the worker has had prior knowledge regarding the question
+\item Answer: the field to be used for the user's answer to the given question
+\item Source: the source used to find the answer
+\end{enumerate}
 
-This section will describe the setup of our crowdsourcing experiments.
+For time-pressured collection users were shown an artificial timer that counted down from 60 seconds after indicating they were done reading the question. The timer changed from the color green to red once the timer reached 10 seconds.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{img/answering_screenshot}
+\caption{Answer Crowdsourcing Form}
+\label{fig:validation_form}
+\end{figure}
 
+\subsection{Validation Crowdsourcing Interface}
+\label{subsec:interface}
 
+For answer validation, users were shown the instructions on how to answer the validation form. Upon clicking a button to indicate that they were done reading the instructions, a question along with its category, a 60 second timer, and 3 answers to the question became unhidden through the use of javascript embedded in the form. The user would then choose at least one answer that they felt best answered the question. The user would also rate each question from 1 to 4 according to the following criterion:
+
+\begin{enumerate}
+\item Bad –- contains no useful information
+\item Fair –- marginally useful information
+\item Good –- Partially answers the question
+\item Excellent -– fully answers the question
+\end{enumerate}
+
+At the 15 second mark the timer changed from the color green to the color red.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{img/validation_screenshot}
+\caption{Answer Validation Form}
+\label{fig:validation_form}
+\end{figure}
 
 \section{Results}
 \label{sec:results}
