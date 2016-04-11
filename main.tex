@@ -322,14 +322,17 @@ In CrowdDB human input is used to collect missing data, perform computationally 
 In \cite{aydin2014crowdsourcing} authors explored efficient ways to combine human input for multiple choice questions from the ``Who wants to be a millionaire?'' TV show.
 In this scenario going with the majority for complex questions isn't effective, and certain answerer confidence weighting schemas can improve the results.  
 
-Using crowdsourcing for relevance judgments has been studied extensively in the information retrieval community, e.g. \cite{Alonso:2008:CRE:1480506.1480508,alonso2011design,grady2010crowdsourcing}.
-
+Using crowdsourcing for relevance judgments has been studied extensively in the information retrieval community, e.g. \cite{Alonso:2008:CRE:1480506.1480508,alonso2011design,grady2010crowdsourcing} to name a few.
+The focus in these works is on document relevance, and the quality of crowdsourced judgments.
+Whereas in our paper we are investigating an ability of the crowd to assess the quality of the answers fast, so a question answering system could use this signal.
 
 Crowdsourcing is usually associated with offline data collection, which requires certain amount of time for data collection.
 Using crowdsourcing in (near) real-time scenarios poses certain additional challenges.
 \cite{bernstein2011crowds} introduced the retainer model for recruiting synchronous crowds for interactive real-time tasks and showed their effectiveness on the best single image and creative generation tasks.
 We are planning to build on this ideas to integrate a crowd into a real-time question answering system.
 The work of \cite{Lasecki:2013:CCC:2501988.2502057} showed how multiple workers can sit behind a conversational agent named Chorus, where human input is used to propose and vote on responses. 
+Another use of a crowd for maintaining a dialog is presented in \cite{Bessho:2012:DSU:2392800.2392841}, who let the crowd handle hard cases, when a system was not able to automatically retrieve a good response from the database of twitter data.
+In this paper, we focus on a single part of the human-computer dialog, i.e. question answering, which requires a system to provide some useful information in a response to the user.
 
 
 \section{Conclusion}
