@@ -87,6 +87,7 @@ Nevertheless, many questions were not answered well by any of the participating 
 In this work we explore two ways common crowdsourcing can be used to help an automated system to answer complex user questions in near real-time scenario, e.g., within a minute.
 More specifically, we study if crowd workers can quickly and reliably judge the quality of the proposed answer candidates, and if it is possible to obtain reasonable written answers from the crowd within a limited amount of time. Our research questions can be stated as:
 \begin{enumerate}
+\setlength\itemsep{0.0em}
 \item RQ1. Can crowdsourcing be used to judge the quality of answers to non-factoid questions under a time limit?
 \item RQ2. Is it possible to use crowdsourcing to collect answers to real user questions under a time limit?
 \item RQ3. How does the quality of crowdsourced answers to non-factoid question compare to original CQA answers, and to automatic answers from TREC LiveQA systems?
@@ -102,7 +103,10 @@ The questions for the task were selected by the organizers from the live stream 
 For these questions we also crawled their community answers, that were eventually posted on Yahoo! Answers\footnote{As the answer we took the top question, which was selected as the ``Best answer'' by the author of the question or the community.}.
 
 To answer the RQ1 we asked workers to rate answers to a sample of 100 questions using the official TREC rating scale:
+\vspace{-0.3cm}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
 \item 1: Bad - contains no useful information
 \item 2: Fair - marginally useful information
 \item 3: Good - partially answers the question
@@ -117,7 +121,7 @@ To answer the RQ1 we asked workers to rate answers to a sample of 100 questions 
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\linewidth]{img/answering_screenshot2}
+\includegraphics[width=0.8\linewidth]{img/answering_screenshot2}
 \caption{Answer crowdsourcing form}
 \label{fig:interfaces:answer}
 \end{figure}
@@ -145,13 +149,17 @@ Using this link, workers could search the web as it was on 8/30/2015, before TRE
 Initially, the question was hidden for proper accounting of question reading and answering times.
 Upon clicking a button to indicate that they were done reading the instructions, a question appeared along with a button, which needs to be clicked when they done reading the question.
 After that, the answering form appears, it contained four fields:
+\vspace{-0.4cm}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
 \item Does the answer make sense: A yes or no question to see if the answer was comprehensible 
 \item Are you familiar with the question: A yes or no question to evaluate whether the worker has had prior knowledge regarding the question
 \item Answer: the field to be used for the user's answer to the given question
 \item Source: the source used to find the answer: URL of a webpage or NA if the worker used his own expertise
 \end{enumerate}
 
+\vspace{-0.4cm}
 Finally, to answer RQ3 we collected together crowdsourced answers, answers from the winning and another top-10 LiveQA'15 systems and the original answers crawled from Yahoo! Answers.
 Each set of answers was given to mechanical turk workers for rating.
 
@@ -186,7 +194,7 @@ Figure \ref{figure:validation_time} shows that even though the median time to ra
 
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{img/validation_time}
+	\includegraphics[width=0.4\textwidth]{img/validation_time}
 	\caption{Box plot of answer rating time with and without time pressure}
 	\label{figure:validation_time}
 \end{figure}
@@ -198,7 +206,10 @@ We can conclude, that in general we can trust crowdsourced ratings and we will u
 
 In the experiment of answer crowdsourcing we collected 6 answers (with and without time pressure) for each of the 1087 LiveQA'15 questions.
 Since we have answers from different sources, let's make the following notations:
+\vspace{-0.4cm}
 \begin{itemize}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
 	\item \textit{Yahoo! Answers} - answers eventually posted by users on Yahoo! Answers for the original questions
 	\item \textit{Crowd} - answers collected from Mechanical Turk workers without time pressure
 	\item \textit{Crowd-time} - answers collected from Mechanical Turk workers with one minute time pressure
@@ -225,6 +236,7 @@ Length (words) & 64.54 & 34.16 & 22.82 & 137.23 \\
 \hline
 \end{tabular}
 \label{table:answer_stats}
+\vspace{-0.3cm}
 \end{table*}
 
 From the Figure \ref{fig:answering_time_distribution} we can see that adding time pressure shifts the distribution of answering times\footnote{For the experiment with time pressure we had separate timers for reading instructions, reading the question and writing the answer, that's why the total time on the plot could be more than 1 minute}.
@@ -232,7 +244,7 @@ The tail of longer work times for no time limit experiment becomes thin with tim
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{img/answering_time_distribution}
+	\includegraphics[width=0.4\textwidth]{img/answering_time_distribution}
 	\caption{Distribution of answering times for experiments with and without time pressure}
 	\label{fig:answering_time_distribution}
 \end{figure}
@@ -246,14 +258,14 @@ Finally, as expected, time pressure had its negative effect on the quality, howe
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{img/average_score}
+	\includegraphics[width=0.4\textwidth]{img/average_score}
 	\caption{Average scores of different type of answers to Yahoo! Answers questions for different categories}
 	\label{fig:average_score}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{img/scores_distribution}
+	\includegraphics[width=0.4\textwidth]{img/scores_distribution}
 	\caption{Distribution of scores for different types of answers to Yahoo! Answers questions}
 	\label{fig:scores_distribution}
 \end{figure}
